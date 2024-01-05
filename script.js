@@ -186,7 +186,7 @@ test_start_btn.addEventListener('click', (e) => {
 
 test_next_btn.addEventListener('click', (e) => {
     e.preventDefault();
-    
+    activeId++;
     if (activeId == questions.length) {
         
         test_next_btn.style.display = 'none';
@@ -209,7 +209,7 @@ test_next_btn.addEventListener('click', (e) => {
     };
     data.push(context);
     
-    activeId++;
+   
     test_content.style.left = -activeId * 100 +'%';
     test_progress.style.width = activeId / questions.length * 100 + '%';
 });
