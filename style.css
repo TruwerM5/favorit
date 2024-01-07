@@ -90,7 +90,6 @@ button {
 }
 
 
-/* HERO SECTION */
 .header {
     position: fixed;
     top: 0;
@@ -107,6 +106,28 @@ button {
             transform: translateX(-50%);
 }
 
+.header__subnav {
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
+    
+    .header__subnav {
+        display: flex;
+        position: absolute;
+        top: 120px;
+        left: 50%;
+        transform: translateX(-50%);
+        gap: 42px;
+        z-index: 10;
+    } 
+    .header__subnav-link {
+        font-size: 2rem;
+        font-weight: 500;
+        color: #fff;
+    }
+}  
+
 .navbar {
     max-width: 1200px;
     margin: 0 auto;
@@ -120,7 +141,14 @@ button {
 .navbar__logo {
     max-width: 150px;
 }
-
+@media screen and (min-width: 1024px) {
+    .navbar__logo {
+        max-width: 202px;
+    }
+    .navbar__logo-wrapper {
+        width: 202px;
+    }
+}
 .navbar__nav {
     display: none;
     position: absolute;
@@ -283,6 +311,9 @@ button {
 }
 
 @media screen and (min-width: 1024px) {
+    .hero {
+        position: relative;
+    }
     .hero__inner {
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
@@ -293,7 +324,21 @@ button {
                 align-items: center;
         max-width: 1200px;
         margin: 0 auto;
-        height: 711px;
+        height: 600px;
+        position: relative;
+        padding: 0;
+    }
+    .hero::before,
+    .hero::after {
+        content: url('./images/lamp.png');
+        position: absolute;
+        top: 0;
+    }
+    .hero::before {
+        left: 300px;
+    }
+    .hero::after {
+        right: 300px;
     }
     .hero__content {
         width: 60%;
@@ -313,6 +358,10 @@ button {
     .hero__header {
         font-size: 4.3rem;
         text-align: left;
+        
+    }
+    .hero__content {
+        margin-bottom: 100px;
     }
 }
 
@@ -340,6 +389,7 @@ button {
             flex-direction: column;
     margin-block: 20px 3px;
 }
+
 
 @media screen and (min-width: 1024px) {
     .hero__button-block {
@@ -375,6 +425,14 @@ button {
         padding: 15px 38px;
         margin: 0;
         font-size: 2.2rem;
+        position: relative;
+    }
+    .hero__button::after {
+        content: url('./images/arrow.svg');
+        position: absolute;
+        left: 100%;
+        top: 0;
+        transform: translateY(-50%);
     }
 }
 
@@ -393,8 +451,12 @@ button {
     z-index: 10;
 }
 
+.hero .hero__btn {
+    margin-bottom: 32px;
+}
+
 @media screen and (min-width: 1024px) {
-    .hero__btn {
+    .hero .hero__btn {
         display: none;
     }
     .hero__bottom {
@@ -493,6 +555,8 @@ button {
     left: 0;
     height: 100%;
     top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .hero__img_desktop {
@@ -537,7 +601,7 @@ button {
 }
 
 .todo__item {
-    height: 237px;
+    
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -555,8 +619,9 @@ button {
 @media screen and (min-width: 1024px) {
     .todo__item {
         -webkit-box-flex: 1;
-            -ms-flex: 1;
-                flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        height: 237px;
         gap: 18px;
         padding: 23px 5px;
         -webkit-box-pack: start;
@@ -712,12 +777,12 @@ button {
        -moz-user-select: none;
         -ms-user-select: none;
             user-select: none;
-    padding: 11px 30px;
+    padding: 11px 45px;
     border-radius: 100px;
     border: 1px solid #D6AD64;
     color: #D6AD64;
     font-size: 1.8rem;
-    font-weight: 700;
+    font-weight: 600;
     text-align: left;
 }
 
@@ -1121,7 +1186,7 @@ button {
 }
 
 .accordion__close-btn {
-    margin: 0 auto;
+    margin: 20px auto 0 auto;
 }
 
 .accordion__list {
@@ -1331,6 +1396,9 @@ button {
     -o-transition: all .3s;
     transition: all .3s;
 }
+
+
+
 @media screen and (min-width: 1024px) {
     .carousel__list_1 {
         display: -ms-grid;
@@ -1345,6 +1413,10 @@ button {
         -ms-grid-columns: 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr;
         grid-template-columns: repeat(12, 1fr);
         gap: 20px;
+    }
+    .carousel__list_3 {
+        justify-content: center;
+        gap: 98px;
     }
 }
 
@@ -1397,7 +1469,7 @@ button {
 
 .carousel__subtitle {
     font-size: 1.7rem;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 24px;
     margin-block: 30px 40px;
     color: #fff;
@@ -1770,6 +1842,7 @@ button {
     font-weight: 600;
     color: #fff;
     text-align: center;
+    max-width: 276px;
 }
 
 .result__about .primary {
@@ -1784,6 +1857,14 @@ button {
     color: #FFCF6F;
 }
 
+@media screen and (min-width: 1024px) {
+    .statement__title {
+        position: relative;
+        top: 100px;
+    }
+    
+}
+
 .statement__subtitle {
     font-size: 1.6rem;
     font-weight: 900;
@@ -1793,6 +1874,15 @@ button {
     margin-bottom: 40px;
     margin-inline: auto;
     max-width: 808px;
+}
+
+@media screen and (min-width: 1024px) {
+    .statement__subtitle {
+        position: relative;
+        top: 100px;
+        font-size: 2rem;
+        padding: 0;
+    }
     
 }
 
@@ -1809,7 +1899,7 @@ button {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    max-width: 1170px;
+    max-width: 1920px;
     margin: 0 auto;
 }
 
@@ -1834,14 +1924,13 @@ button {
         display: block;
     }
     .statement__inner {
-        background-image: url('./images/statement-gradient.png');
         /* background-position: center top; */
         position: relative;
-        min-height: 700px;
+        min-height: 800px;
         background-image: url('./images/statement-img.png');
         background-repeat: no-repeat;
-        background-position: center top;
-        background-size: 120%;
+        background-position: center center;
+        background-size: 100%;
         -webkit-box-pack: center;
             -ms-flex-pack: center;
                 justify-content: center;
@@ -2060,6 +2149,7 @@ a.footer__text_underlined {
     position: relative;
     width: 400px;
     height: 400px;
+    max-width: 90%;
     padding: 30px 42px;
     border-radius: 30px;
     background-color: #000;
@@ -2125,7 +2215,8 @@ a.footer__text_underlined {
 
 .modal__submit {
     margin-top: 30px;
-    padding: 15px 90px;
+    padding: 15px 60px;
+    width: 100%;
     color: #FFF;
     font-size: 2.2rem;
     font-family: 'Helvetica';
@@ -2146,7 +2237,7 @@ a.footer__text_underlined {
 .modal__link {
     color: #E7BB68;
     font-family: Mulish;
-    
+    display: inline;
     font-style: normal;
     font-weight: 500;
     line-height: normal;

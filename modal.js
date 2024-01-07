@@ -1,13 +1,17 @@
 const modal = document.querySelector('.modal');
-const modal_open_btn = document.querySelector('.problems__button');
+const open_modal_buttons = document.querySelectorAll('.open-modal-btn');
 const modal_close_btn = document.querySelector('.modal__close-btn');
 
-modal_open_btn.addEventListener('click', (e) => {
-    e.preventDefault();
-    modal.classList.toggle('active');
+
+open_modal_buttons.forEach(btn => {
+    btn.addEventListener('click', e => {
+        e.preventDefault();
+        modal.classList.add('active');
+    });
 });
+
 
 modal_close_btn.addEventListener('click', (e) => {
     e.preventDefault();
-    modal.classList.toggle('active');
+    modal.classList.remove('active');
 });
