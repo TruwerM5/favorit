@@ -236,6 +236,13 @@ button {
     text-align: center;
 }
 
+@media screen and (min-width: 1024px) {
+    .hero {
+        padding: 93px 35px 0 35px;
+
+    }
+}
+
 .hero__bg-gradient {
     position: absolute;
     top: 30%;
@@ -498,8 +505,12 @@ button {
     }
     .hero__img_desktop {
         display: block;
-        position: relative;
-        bottom: -36px;
+        height: 509px;
+        width: 423px;
+    }
+    .hero__img_desktop img {
+        position: absolute;
+        bottom: 0;
     }
 }
 
@@ -1158,6 +1169,35 @@ button {
     margin-inline: auto;
 }
 
+.about__person-block {
+    overflow: hidden;
+}
+
+.about__person_2 img {
+    position: relative;
+    height: 100%;
+    right: -30%;
+}
+
+.about__person_1 img {
+    position: relative;
+    left: -10%;
+}
+
+.about__person_2 .about__person-about {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    max-width: 170px;
+}
+
+.about__person_1 .about__person-about {
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    max-width: 170px;
+}
+
 @media screen and (min-width: 1024px) {
     .about__person{
         -webkit-box-orient: horizontal;
@@ -1201,6 +1241,7 @@ button {
         position: absolute;
         min-width: 100%;
         min-height: 100%;
+        right: 0;
         bottom: 0;
     }
     .about__person-photo {
@@ -1218,8 +1259,7 @@ button {
         position: absolute;
         right: 100%
     }
-    .about__person-about_2 {
-        right: 100%;
+    .about__person_2 .about__person-about_2 {
         left: auto;
         bottom: 0;
     }
