@@ -880,6 +880,7 @@ button {
         font-size: 3rem;
         max-width: 757px;
         margin: 0 auto 15px auto;
+        padding-inline: 0;
     }
 }
 
@@ -1413,6 +1414,11 @@ button {
         -ms-grid-columns: 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr;
         grid-template-columns: repeat(12, 1fr);
         gap: 20px;
+        max-width: 1020px;
+        margin: 0 auto;
+    }
+    .carousel__list_2 .carousel__item:not(.carousel__item_large) img {
+        height: 306px;
     }
     .carousel__list_3 {
         justify-content: center;
