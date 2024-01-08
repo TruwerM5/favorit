@@ -1403,6 +1403,7 @@ button {
 }
 
 .carousel-section {
+    position: relative;
     padding: 51px 47px;
     background-image: url('./images/carousel-bg.jpg');
     background-repeat: no-repeat;
@@ -1490,6 +1491,22 @@ button {
         -ms-flex-align: center;
             align-items: center;
     gap: 35px;
+    position: absolute;
+    width: 90%;
+    margin: 0 auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.carousel__button_prev {
+    position: absolute;
+    left: -60px;
+}
+
+.carousel__button_next {
+    position: absolute;
+    right: -60px;
 }
 
 @media screen and (min-width: 1024px) {
@@ -1506,6 +1523,10 @@ button {
     margin-block: 30px 40px;
     color: #fff;
     text-align: center;
+}
+
+.carousel_2-wrapper,.carousel_1-wrapper {
+    position: relative;
 }
 
 @media screen and (min-width: 1024px) {
@@ -1840,6 +1861,11 @@ button {
     background-size: center center;
 }
 
+
+.results__carousel {
+    position: relative;
+}
+
 .results__header {
     padding-top: 40px;
     font-size: 2.3rem;
@@ -1850,6 +1876,7 @@ button {
 }
 
 .results__inner {
+    position: relative;
     padding-inline: 62px;
 }
 
