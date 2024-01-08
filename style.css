@@ -354,6 +354,10 @@ button {
     margin-bottom: 3px;
 }
 
+.hero__content {
+    padding-top: 40px;
+}
+
 @media screen and (min-width: 1024px) {
     .hero__header {
         font-size: 4.3rem;
@@ -362,6 +366,7 @@ button {
     }
     .hero__content {
         margin-bottom: 100px;
+        padding-top: 0;
     }
 }
 
@@ -1083,6 +1088,7 @@ button {
     padding: 20px;
     background-image: url('./images/accordeon-bg.jpg');
     background-repeat: no-repeat;
+    background-size: cover;
 
 }
 
@@ -1235,6 +1241,13 @@ button {
     margin-bottom: 20px;
     max-width: 1200px;
     margin-inline: auto;
+    overflow: hidden;
+}
+
+@media screen and (min-width: 1024px) {
+    .about__person {
+        overflow: visible;
+    }
 }
 
 .about__person-block {
@@ -1245,12 +1258,23 @@ button {
     position: relative;
     height: 100%;
     right: -30%;
+    max-width: 70%;
 }
 
 .about__person_1 img {
     position: relative;
     left: -10%;
+    max-width: 50%;
 }
+@media screen and (min-width: 1024px) {
+    .about__person_1 img {
+        max-width: none;
+    }
+    .about__person_2 img {
+        max-width: none;
+    }
+}
+
 
 .about__person_2 .about__person-about {
     position: absolute;
