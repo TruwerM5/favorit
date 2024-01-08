@@ -93,7 +93,6 @@ button {
 .header {
     position: fixed;
     top: 0;
-    left: 0;
     width: 100%;
     padding: 25px 23px;
     background-color: rgba(16, 16, 18, 0.7);
@@ -105,6 +104,7 @@ button {
         -ms-transform: translateX(-50%);
             transform: translateX(-50%);
 }
+
 
 .header__subnav {
     display: none;
@@ -1082,6 +1082,8 @@ button {
 .accordion {
     padding: 20px;
     background-image: url('./images/accordeon-bg.jpg');
+    background-repeat: no-repeat;
+
 }
 
 .accordion__header {
@@ -1699,7 +1701,11 @@ button {
             justify-content: space-between;
     margin-bottom: 80px;
 }
-
+@media screen and (max-width: 380px) {
+    .jobs {
+        height: 1400px;
+    }
+}
 @media screen and (min-width: 1024px) {
     .jobs {
         background-image: url('./images/jobs-desktop.svg');
@@ -1894,7 +1900,7 @@ button {
 
 .statement__inner {
     position: relative;
-    min-height: 700px;
+    min-height: 500px;
     background-image: url('./images/statement-gradient.png');
     background-repeat: no-repeat;
     background-position: center top;
@@ -2160,7 +2166,11 @@ a.footer__text_underlined {
     border-radius: 30px;
     background-color: #000;
 }
-
+@media screen and (max-width: 400px) {
+    .modal__form {
+        width: auto;
+    }
+}
 .modal__close-btn {
     position: absolute;
     top: 15px;
