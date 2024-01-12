@@ -1,10 +1,17 @@
 let navbar_nav = document.querySelector('.navbar__nav');
+let navbar__items = document.querySelectorAll('.navbar__item');
 const navbar__toggler = document.querySelector('.navbar__toggler');
 
 navbar__toggler.addEventListener('click', (e) => {
     e.preventDefault();
     navbar_nav.classList.toggle('active');
-})
+});
+
+navbar__items.forEach(item => {
+    item.addEventListener('click', e => {
+       navbar_nav.classList.remove('active'); 
+    });
+});
 
 //TEST
 

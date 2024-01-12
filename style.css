@@ -21,6 +21,7 @@ body {
     max-width: 1920px;
     margin: 0 auto;
     font-family: 'Mulish', sans-serif;
+    position: relative;
 }
 
 a,span,img,input,li,button {
@@ -106,8 +107,9 @@ button {
 }
 
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
     .header {
+        position: absolute;
         padding: 0;
     }
 }
@@ -126,7 +128,7 @@ button {
     display: none;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
     
     .header__subnav {
         display: flex;
@@ -147,7 +149,7 @@ button {
 .header__top {
     display: none;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
 
     .header__top {
         display: flex;
@@ -179,7 +181,7 @@ button {
 .header__bottom {
     display: none;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
     .header__bottom {
         display: flex;
         justify-content: center;
@@ -205,13 +207,21 @@ button {
 }
 
 .header__bottom-item_nested::after {
-    content: url('./images/chevron.png');
+    content: '';
     display: block;
-    height: 16px;
-    max-width: 16px;
+    height: 7px;
+    width: 7px;
+    background: url('./images/chevron.png') no-repeat center;
+    background-size: contain;
     position: absolute;
-    right: 0;
-    top: 0;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: .2s;
+}
+
+.header__bottom-item_nested:hover::after {
+    transform: translateY(-50%) rotate(180deg);
 }
 
 .navbar {
@@ -219,7 +229,7 @@ button {
     margin: 0 auto;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
     .navbar {
         padding-block: 10px; 
     }
@@ -233,7 +243,7 @@ button {
 .navbar__logo {
     max-width: 150px;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
     .navbar__logo {
         max-width: 202px;
     }
@@ -285,7 +295,7 @@ button {
     font-size: 1.8rem;
     font-weight: 700;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
     .navbar__toggler {
         display: none;
     }
@@ -311,7 +321,7 @@ button {
     display: none;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
     .dt-nav {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -356,7 +366,7 @@ button {
     text-align: center;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
     .hero {
         padding: 140px 35px 0 35px;
 
@@ -375,7 +385,7 @@ button {
             filter: blur(277px);
     z-index: 0;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
     .hero__bg-gradient {
         top: 0;
         height: 319px;
@@ -402,7 +412,7 @@ button {
     z-index: 5;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
     .hero {
         position: relative;
     }
@@ -450,7 +460,7 @@ button {
     padding-top: 40px;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
     .hero__header {
         font-size: 4.3rem;
         text-align: left;
@@ -467,7 +477,7 @@ button {
     font-weight: 700;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
     .hero__subtitle {
         font-size: 3rem;
         font-weight: 400;
@@ -488,7 +498,7 @@ button {
 }
 
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
     .hero__button-block {
         -webkit-box-orient: vertical;
         -webkit-box-direction: reverse;
@@ -517,7 +527,7 @@ button {
     background: linear-gradient(90deg, #AF873A 4.26%, #C59C4E 35.68%, #E7BB68 51.13%, #D4AA5C 100%);
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
     .hero__button {
         padding: 15px 38px;
         margin: 0;
@@ -552,7 +562,7 @@ button {
     margin-bottom: 32px;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
     .hero .hero__btn {
         display: none;
     }
@@ -574,7 +584,7 @@ button {
     font-weight: 300;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
     .hero__button-subtitle {
         font-size: 1.9rem;
         text-align: center;
@@ -597,7 +607,7 @@ button {
     gap: 20px;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
     .hero__list {
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
@@ -628,7 +638,7 @@ button {
     font-size: 1.8rem;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
     .hero__item {
         -webkit-box-flex: 1;
             -ms-flex: 1;
@@ -660,7 +670,7 @@ button {
     display: none;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
     .hero__img {
         display: none;
     }
@@ -687,7 +697,7 @@ button {
     gap: 20px;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
     .todo__list {
         display: -ms-grid;
         display: grid;
@@ -713,7 +723,7 @@ button {
     background-color: #EAEEF1;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
     .todo__item {
         -webkit-box-flex: 1;
         -ms-flex: 1;
@@ -773,7 +783,7 @@ button {
     background: linear-gradient(90deg, #AF873A -35.95%, #C59C4E 2.95%, #E7BB68 56.99%, #D4AA5C 152.14%), #CBA55A;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
     .test__button::before,
     .test__button::after {
         width: 52px;
@@ -958,7 +968,7 @@ button {
     padding-block: 80px;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
     .problems {
         padding-block: 100px;
     }
@@ -972,7 +982,7 @@ button {
     text-transform: uppercase;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
     .problems__header {
         font-size: 3rem;
         max-width: 757px;
@@ -985,7 +995,7 @@ button {
     font-size: 2.1rem;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
     .problems__header_2 {
         font-size: 3rem;
         max-width: 925px;
@@ -999,7 +1009,7 @@ button {
     font-size: 1.7rem;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
     .problems__subtitle {
         font-size: 2rem;
     }    
@@ -1012,7 +1022,7 @@ button {
     border-radius: 30px;
     background-color: #EAEEF1;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
     .problems__block {
         position: relative;
         -webkit-box-flex: 1;
@@ -1047,7 +1057,7 @@ button {
     gap: 13px;
     text-align: center;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
     .problems__item {
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
@@ -1063,7 +1073,7 @@ button {
 .problems__desktop-img {
     display: none;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
     .problems__desktop-img {
         display: block;
         min-width: 45%;
@@ -1081,7 +1091,7 @@ button {
     margin-bottom: 20px;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
     .problems__subtitle_italic {
         max-width: 884px;
         margin-inline: auto;
@@ -1105,7 +1115,7 @@ button {
     background: linear-gradient(90deg, #AF873A 4.26%, #C59C4E 35.68%, #E7BB68 51.13%, #D4AA5C 100%);
 }
 
-@media screen and (min-width: 1024px)  {
+@media screen and (min-width: 1200px)  {
     .problems__button {
         font-size: 2.2rem;
         margin-bottom: 100px;
@@ -1126,7 +1136,7 @@ button {
             align-items: center;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
     .problems__block-2 {
         padding: 20px 0 20px 35px;
         -webkit-box-orient: horizontal;
@@ -1143,7 +1153,7 @@ button {
     max-width: 133px;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
     .problems__img-block {
         position: relative;
         width: 310px;
@@ -1164,7 +1174,7 @@ button {
     text-align: center;
 }
 
-@media screen and (min-width: 1024px)  {
+@media screen and (min-width: 1200px)  {
     .problems__text-block {
         font-size: 2rem;
         text-align: left;
@@ -1178,7 +1188,7 @@ button {
 
 .accordion {
     padding: 20px;
-    background-image: url('./images/accordeon-bg.jpg');
+    background-image: url('./images/accordion-bg.png');
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -1202,11 +1212,11 @@ button {
     display: grid;
     /* grid-template-columns: 1fr 1fr; */
     -ms-grid-rows: auto 40px auto 40px auto 40px auto;
-    grid-template-rows: repeat(4, auto);
+    grid-template-rows: repeat(2, auto);
     gap: 40px;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
     .accordion__heads {
         -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
@@ -1313,7 +1323,7 @@ button {
             text-decoration-color: #CBA55A;
     text-decoration-thickness: 5px;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
     .about__header {
         font-size: 3rem;
     }
@@ -1336,7 +1346,7 @@ button {
     overflow: hidden;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
     .about__person {
         overflow: visible;
     }
@@ -1358,7 +1368,7 @@ button {
     left: -10%;
     max-width: 50%;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
     .about__person_1 img {
         max-width: none;
     }
@@ -1382,7 +1392,7 @@ button {
     max-width: 170px;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
     .about__person{
         -webkit-box-orient: horizontal;
         -webkit-box-direction: reverse;
@@ -1466,7 +1476,7 @@ button {
     line-height: 2.8rem;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
     .about__person-text {
         font-size: 1.8rem;
         max-width: 824px;
@@ -1519,7 +1529,7 @@ button {
 
 
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
     .carousel__list_1 {
         display: -ms-grid;
         display: grid;
@@ -1563,7 +1573,7 @@ button {
             align-items: center;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
     .carousel__item {
         min-width: 0;
     }
@@ -1601,7 +1611,7 @@ button {
     right: -60px;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
     .carousel__buttons {
         display: none;
     }
@@ -1621,7 +1631,7 @@ button {
     position: relative;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
     .carousel__subtitle {
         font-size: 2.3rem;
         max-width: 936px;
@@ -1683,7 +1693,7 @@ button {
 }
 
 .carousel-section__inner {
-    max-width: 1280px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -1698,7 +1708,7 @@ button {
     padding: 80px 10px;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
     .frames {
         padding: 100px 10px;
     }
@@ -1710,7 +1720,7 @@ button {
     font-weight: 900;
     text-transform: uppercase;
 }
-@media screen and (min-width: 1024px)  {
+@media screen and (min-width: 1200px)  {
     .frames__header {
         font-size: 3rem;
         margin-bottom: 36px;
@@ -1729,7 +1739,7 @@ button {
             justify-content: center;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
     .frames__inner {
         max-width: 1100px;
         margin: 0 auto;
@@ -1792,7 +1802,7 @@ button {
     display: none;
     place-items: center;
     background-color: rgba(25, 25, 25, 0.89);
-    z-index: 10;
+    z-index: 100;
 }
 
 .frames__modal-wrapper.active {
@@ -1824,8 +1834,8 @@ button {
     background-image: url('./images/jobs.svg');
     background-repeat: no-repeat;
     background-position: center 30%;
-    background-size: contain;
-    height: 1545px;
+    background-size: auto;
+    height: 1400px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1843,7 +1853,7 @@ button {
         height: 1400px;
     }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
     .jobs {
         background-image: url('./images/jobs-desktop.svg');
         background-repeat: no-repeat;
@@ -1875,7 +1885,7 @@ button {
     text-transform: uppercase;
 }
 
-@media screen and (min-width: 1024px)  {
+@media screen and (min-width: 1200px)  {
     .jobs__header {
         font-size: 3rem;
     }
@@ -1890,7 +1900,7 @@ button {
     margin-block: 30px 40px;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
     .jobs__text {
         font-size: 2.1rem;
         margin-block: 15px;
@@ -1927,7 +1937,7 @@ button {
 
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
     .jobs__button {
         margin: 0;
     }
@@ -1939,7 +1949,7 @@ button {
     text-align: center;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
     .jobs__subtitle {
         text-align: left;
     }
@@ -2012,7 +2022,7 @@ button {
     color: #FFCF6F;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
     .statement__title {
         position: relative;
         top: 100px;
@@ -2031,7 +2041,7 @@ button {
     max-width: 808px;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
     .statement__subtitle {
         position: relative;
         top: 100px;
@@ -2074,7 +2084,7 @@ button {
     display: none;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
     .statement__img {
         display: block;
     }
@@ -2122,7 +2132,7 @@ button {
 }
 
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
     .footer__grid {
         -ms-grid-columns: 1fr 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -2141,6 +2151,7 @@ button {
     font-size: 1.4rem;
     color: #fff;
     line-height: 27px;
+    font-family: Helvetica, sans-serif;
     margin-bottom: 3px;
     -webkit-transition: .3s;
     -o-transition: .3s;
