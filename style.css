@@ -1463,9 +1463,9 @@ button {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack:start;
+        -ms-flex-pack:start;
+            justify-content: flex-start;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -1556,7 +1556,7 @@ button {
 
 .user-card__info {
     position: relative;
-    padding-top: 15px;
+    margin-top: 15px;
     text-align: center;
     color: #fff;
 }
@@ -1566,7 +1566,7 @@ button {
     position: absolute;
     height: 1px;
     width: 175px;
-    top: 0px;
+    top: -10px;
     left: 50%;
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);

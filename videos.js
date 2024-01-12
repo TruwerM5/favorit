@@ -15,4 +15,5 @@ iframe_open_buttons.forEach(btn => {
 modal_frame_close_btn.addEventListener('click', e => {
     e.preventDefault();
     modal_frame.classList.remove('active');
+    iframe.src = '';
 });
