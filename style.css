@@ -2084,6 +2084,10 @@ button {
     display: none;
 }
 
+.statement__gradient {
+    display: none;
+}
+
 @media screen and (min-width: 1200px) {
     .statement__img {
         display: block;
@@ -2092,16 +2096,18 @@ button {
         /* background-position: center top; */
         position: relative;
         min-height: 800px;
-        background-image: url('./images/statement-img.png');
+        /* background-image: url('./images/statement-img.png'); */
+        background-image: url('./images/statement-img-2.png');
         background-repeat: no-repeat;
-        background-position: center center;
-        background-size: 100%;
+        background-position: left center;
+        background-size: contain;
         -webkit-box-pack: center;
             -ms-flex-pack: center;
                 justify-content: center;
         -webkit-box-align: center;
             -ms-flex-align: center;
                 align-items: center;
+                z-index: 10;
     }
     .statement__column {
         
@@ -2110,6 +2116,26 @@ button {
             -ms-flex-pack: start;
         
                 justify-content: flex-start;
+    }
+    .statement__gradient {
+        /* display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 0;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        background-image: url('./images/statement-gradient-2.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain; */
+    }
+    .statement {
+        background-image: url('./images/statement-gradient-2.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
     }
 }
 
