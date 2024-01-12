@@ -106,6 +106,22 @@ button {
 }
 
 
+@media screen and (min-width: 1024px) {
+    .header {
+        padding: 0;
+    }
+}
+
+
+.header__text {
+    font-size: 2rem;
+    font-family: Helvetica, sans-serif;
+    font-weight: 700;
+    color: #CBA55A;
+    max-width: 282px;
+    margin: 0 auto;
+}
+
 .header__subnav {
     display: none;
 }
@@ -128,9 +144,85 @@ button {
     }
 }  
 
+.header__top {
+    display: none;
+}
+@media screen and (min-width: 1024px) {
+
+    .header__top {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+        padding-block: 12px;
+        margin: 0 auto;
+        position: relative;
+        border-bottom: 1px solid #fff;
+    }
+}
+
+.header__top-btn {
+    font-size: 1.8rem;
+    font-weight: 400;
+    font-family: Helvetica, sans-serif;
+    color: #E1E1E1;
+}
+
+.header__top-btn_primary {
+    font-weight: 700;
+    color: #fff;
+    padding: 6px 18px;
+    border-radius: 100px;
+    background-color: #D7AE5E;
+}
+
+.header__bottom {
+    display: none;
+}
+@media screen and (min-width: 1024px) {
+    .header__bottom {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding-block: 13px;
+        border-top: 1px solid #fff;
+        
+    }
+}
+
+.header__bottom-item {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    font-family: Helvetica, sans-serif;
+    cursor: pointer;
+}
+
+.header__bottom-item_nested {
+    position: relative;
+    padding-right: 26px;
+}
+
+.header__bottom-item_nested::after {
+    content: url('./images/chevron.png');
+    display: block;
+    height: 16px;
+    max-width: 16px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
 .navbar {
-    max-width: 1200px;
+    max-width: 1256px;
     margin: 0 auto;
+}
+
+@media screen and (min-width: 1024px) {
+    .navbar {
+        padding-block: 10px; 
+    }
 }
 
 .navbar__logo-wrapper {
@@ -266,7 +358,7 @@ button {
 
 @media screen and (min-width: 1024px) {
     .hero {
-        padding: 93px 35px 0 35px;
+        padding: 140px 35px 0 35px;
 
     }
 }
@@ -2199,7 +2291,7 @@ a.footer__text_underlined {
     background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.20)), to(rgba(0, 0, 0, 0.20)));
     background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%);
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%);
-    z-index: 15;
+    z-index: 100;
     display: none;
 }
 

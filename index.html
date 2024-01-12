@@ -12,28 +12,54 @@
 </head>
 <body>
     <header class="header">
+        <div class="header__top">
+            <a href="https://favorit-consult.ru/" class="header__top-btn header__top-btn_primary">
+                Банкротство физ. лиц
+            </a>
+            <a href="#about" class="header__top-btn">
+                О нас
+            </a>
+            <a href="#team" class="header__top-btn">
+                Команда
+            </a>
+            <a href="#text" class="header__top-btn">
+                Стоимость услуг
+            </a>
+            <a href="#consult" class="header__top-btn">
+                Консультация
+            </a>
+            <a href="#contacts" class="header__top-btn">
+                Контакты
+            </a>
+        </div>
         <div class="navbar flex items-center">
             <div class="navbar__logo-wrapper">
                 <a href="/index.html" class="navbar__logo">
-                    <img src="./images/logo.png" alt="Logo">
+                    <img src="./images/logo.svg" alt="Logo">
                 </a>
             </div>
             <!-- DESKTOP NAVBAR HERE -->
             <div class="navbar__desktop dt-nav flex">
-                <button class="dt-nav__btn dt__btn_transparent">
+                <p class="header__text">
+                    Поможем списать долги или вернем деньги
+                </p>
+                <!-- <button class="dt-nav__btn dt__btn_transparent">
                     Банкротство физ. лиц
-                </button>
-                <button class="navbar__icon" style="margin-left: 40px;">
+                </button> -->
+                <a href="whatsapp://send?phone=+79096298319/" target="_blank" class="navbar__icon" style="margin-left: 70px;">
                     <img src="./images/whatsapp-icon.png" alt="WhatsApp">
-                </button>
-                <button class="navbar__icon" style="margin-right: 40px;">
+                </a>
+                <a href="viber://add?number=79264915667/" target="_blank" class="navbar__icon">
                     <img src="./images/viber.png" alt="Viber">
-                </button>
+                </a>
+                <a href="tg://resolve?domain=favorit_bankrotstvo" target="_blank" class="navbar__icon"style="margin-right: 50px;">
+                    <img src="./images/tg-icon.svg" alt="telegram">
+                </a>
                 <div class="dt-nav__call">
                     <span class="dt-nav__phone">+7 (499) 714-69-49</span>
                     <span class="dt-nav__text">Звонок бесплатный по всей России</span>
                 </div>
-                <button class="hero__btn">Заказать звонок</button>
+                <button class="hero__btn open-modal-btn">Заказать звонок</button>
             </div>
             <button class="navbar__toggler burger">
                 <img src="./images/burger.png" alt="Burger">
@@ -52,7 +78,7 @@
                         </a>
                     </li>
                     <li class="navbar__item">
-                        <a href="#price" class="navbar__link">
+                        <a href="#test" class="navbar__link">
                             Стоимость услуг
                         </a>
                     </li>
@@ -88,21 +114,23 @@
             </nav>
 
         </div>
-        
+        <ul class="header__bottom">
+            <li class="header__bottom-item header__bottom-item_nested">
+                Банкротство юр. лиц
+            </li>
+            <li class="header__bottom-item header__bottom-item_nested">
+                Субсидиарная ответственность
+            </li>
+            <li class="header__bottom-item header__bottom-item_nested">
+                Оспаривание сделок
+            </li>
+            <li class="header__bottom-item">
+                Другие статьи
+            </li>
+        </ul>
     </header>
     <main class="main">
         <section class="section hero">
-            <ul class="header__subnav">
-                <li class="header__subnav-item">
-                    <a href="#" class="header__subnav-link">Кто мы?</a>
-                </li>
-                <li class="header__subnav-item">
-                    <a href="#" class="header__subnav-link">Рассчитать стоимость</a>
-                </li>
-                <li class="header__subnav-item">
-                    <a href="#" class="header__subnav-link">Скачать презентацию</a>
-                </li>
-            </ul>
             <div class="hero__bg-gradient">
                 
             </div>
@@ -189,7 +217,7 @@
                 </li>
             </ul>
         </section>
-        <section class="test section">
+        <section class="test section" id="test">
             <div class="test__inner">
                 <h2 class="test__header">
                     Рассчитайте <span class="test_color-primary">
@@ -614,7 +642,7 @@
                 </div>
                 
             </div>
-            <div class="statement">
+            <div class="statement" id="consult">
                 <h3 class="statement__title">Хватит ждать!</h3>
                 <p class="statement__subtitle">
                     Оставьте заявку и получите 
