@@ -2117,20 +2117,6 @@ button {
         
                 justify-content: flex-start;
     }
-    .statement__gradient {
-        /* display: block;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        z-index: 0;
-        transform: translate(-50%, -50%);
-        width: 100%;
-        height: 100%;
-        background-image: url('./images/statement-gradient-2.png');
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: contain; */
-    }
     .statement {
         background-image: url('./images/statement-gradient-2.png');
         background-repeat: no-repeat;
