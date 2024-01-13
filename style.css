@@ -561,7 +561,10 @@ button {
 .hero .hero__btn {
     margin-bottom: 32px;
 }
-
+.hero__bottom {
+    position: relative;
+    z-index: 5;
+}
 @media screen and (min-width: 1200px) {
     .hero .hero__btn {
         display: none;
@@ -575,7 +578,7 @@ button {
         -webkit-transform: translateX(-50%);
             -ms-transform: translateX(-50%);
                 transform: translateX(-50%);
-        z-index: 10;
+        z-index: 50;
     }
 }
 
