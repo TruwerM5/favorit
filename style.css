@@ -209,7 +209,7 @@ button {
 .header__bottom-item_nested::after {
     content: '';
     display: block;
-    height: 7px;
+    height: 100%;
     width: 7px;
     background: url('./images/chevron.png') no-repeat center;
     background-size: contain;
@@ -837,6 +837,8 @@ button {
     display: none;
 }
 
+
+
 .test__container.active {
     display: block;
 }
@@ -862,6 +864,16 @@ button {
 .question {
     min-width: 100%;
 }
+@media screen and (min-width: 1200px) {
+    .question__answers {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        max-width: 80%;
+        margin: 0 auto;
+    }
+}
+
 
 .question__answer {
     
@@ -876,13 +888,19 @@ button {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    padding: 11px 31px;
+    padding: 11px 0;
 }
 
 .question__text {
     font-size: 2rem;
     font-weight: 500;
     color: #000;
+}
+
+@media screen and (min-width: 1200px) {
+    .question__text {
+        padding-inline: 20px;
+    }
 }
 
 .question__label {
@@ -894,7 +912,7 @@ button {
        -moz-user-select: none;
         -ms-user-select: none;
             user-select: none;
-    padding: 11px 45px;
+    padding: 11px 0 11px 45px;
     border-radius: 100px;
     border: 1px solid #D6AD64;
     color: #D6AD64;
@@ -1410,7 +1428,7 @@ button {
     position: absolute;
     bottom: 20px;
     right: 0;
-    max-width: 170px;
+    width: 170px;
 }
 
 @media screen and (min-width: 1200px) {
@@ -1477,6 +1495,7 @@ button {
     .about__person_2 .about__person-about_2 {
         left: auto;
         bottom: 0;
+        width: 170px;
     }
 }
 
