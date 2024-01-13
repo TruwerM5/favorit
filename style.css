@@ -382,9 +382,9 @@ button {
     width: 516px;
     height: 406px;
     border-radius: 680px;
-    background: #CBA55A;
-    -webkit-filter: blur(277px);
-            filter: blur(277px);
+    background: #CBA55A no-repeat;
+    /* -webkit-filter: blur(277px);
+            filter: blur(277px); */
 }
 @media screen and (min-width: 1200px) {
     .hero__bg-gradient {
@@ -393,6 +393,7 @@ button {
         width: 680px;
         left: auto;
         right: 0;
+        z-index: 1;
     }
 }
 
@@ -679,6 +680,7 @@ button {
         display: block;
         height: 509px;
         width: 423px;
+        z-index: 1;
     }
     .hero__img_desktop img {
         position: absolute;
