@@ -2191,6 +2191,10 @@ button {
     transition: .3s;
 }
 
+.footer__text img {
+    width: 30px;
+}
+
 a.footer__text:hover {
     color: #d7ae5e;
 }
