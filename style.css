@@ -357,6 +357,7 @@ button {
 
 .hero {
     position: relative;
+    overflow: hidden;
     padding: 93px 35px 36px 35px;
     background-image: url('./images/hero-bg.png');
     background-repeat: no-repeat;
@@ -377,13 +378,13 @@ button {
     position: absolute;
     top: 30%;
     left: 0;
-    width: 100%;
+    width: 516px;
     height: 406px;
     border-radius: 680px;
     background: #CBA55A;
     -webkit-filter: blur(277px);
             filter: blur(277px);
-    z-index: 0;
+    z-index: 5;
 }
 @media screen and (min-width: 1200px) {
     .hero__bg-gradient {
@@ -661,8 +662,7 @@ button {
 
 .hero__img img {
     position: absolute;
-    z-index: -1;
-    left: 0;
+    z-index: -10;
     height: 100%;
     top: 20%;
     left: 50%;
