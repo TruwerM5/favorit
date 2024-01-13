@@ -652,7 +652,7 @@ button {
 
 .hero__img {
     position: relative;
-    z-index: -100;
+    z-index: 1;
     height: 370px;
     width: 100%;
 }
