@@ -376,6 +376,7 @@ button {
 
 .hero__bg-gradient {
     position: absolute;
+    z-index: 1;
     top: 30%;
     left: 0;
     width: 516px;
