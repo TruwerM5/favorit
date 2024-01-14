@@ -1625,6 +1625,10 @@ button {
     }
 }
 
+.carousel__list_2 {
+    align-items: center;
+}
+
 .carousel__buttons {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
