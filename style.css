@@ -2472,3 +2472,8 @@ a.footer__text_underlined {
     line-height: normal;
     text-decoration: underline;
 }
+
+
+.docs__img {
+    height: 241px;
+}
