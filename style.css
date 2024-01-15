@@ -255,19 +255,27 @@ button {
     display: none;
     position: fixed;
     top: 93px;
+    bottom: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    right: 0;
+    width: 100%;
+    height: calc(100% - 93px - 87px);
     z-index: 100;
     background-color: #0D0D11;
     padding: 20px 32px 37px 32px;
-    border-bottom-left-radius: 30px;
     text-align: center;
+    overflow-y: scroll;
+    
+}
+
+.navbar__nav::-webkit-scrollbar {
+    display: none;
 }
 
 .navbar__nav.active {
     display: block;
 }
+
 
 .navbar__list {
     display: -webkit-box;
@@ -285,15 +293,19 @@ button {
     font-size: 1.7rem;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 2.5rem;
+    width: 100%;
 }
 
 
 .navbar__button {
-    padding: 17px 28px;
+    padding: 14px 10px;
     border: 1px solid rgba(215, 174, 94, 1);
     border-radius: 100px;
-    font-size: 1.8rem;
+    font-size: 1.3rem;
     font-weight: 700;
+    color: #fff;
+    min-width: 200px;
+    text-align: center;
 }
 @media screen and (min-width: 1200px) {
     .navbar__toggler {
@@ -303,11 +315,14 @@ button {
 
 
 .icons-wrapper {
-    gap: 46px;
+    display: flex;
+    gap: 10px;
 }
 
 .navbar__icon {
-    width: 40px;
+    flex: 1;
+    width: 4em;
+    max-width: 40px;
 }
 
 .dt-nav {
@@ -2483,14 +2498,28 @@ a.footer__text_underlined {
 }
 
 .submenu {
-    max-height: 0;
+    /* max-height: 0; */
+    height: 0;
     overflow: hidden;
     transition: height 0.3s ease-out;
     padding-left: 20px;
 }
 
-.navbar__link_nested.is-open + .submenu {
-    max-height: 100%;
+.navbar__link_nested {
+    position: relative;
+}
+
+.navbar__link_nested::after {
+    content: url('./images/chevron.png');
+    position: absolute;
+    right: 0;
+    top: 0;
+    
+    transition: .2s;
+}
+
+.navbar__link_nested.is-open::after {
+    transform: translateY(25%) rotate(180deg);
 }
 
 .submenu__item {
@@ -2498,7 +2527,18 @@ a.footer__text_underlined {
 }
 
 .submenu__link,.navbar__link {
+    color: #fff;
     text-align: left;
+
+}
+
+.navbar__link {
+   
+    transition: color .2s;
+}
+
+.navbar__link:hover {
+    color: #d7ae5e;
 }
 
 .submenu__link {
@@ -2512,4 +2552,24 @@ a.footer__text_underlined {
 
 .submenu__link_underlined {
    border-bottom: 1px dashed #fff;
+}
+
+.navbar__bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    /* max-width: min-content; */
+    display: none;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+    border-top: 1px solid #fff;
+    padding: 20px;
+    background-color: #0D0D11;
+}
+
+.navbar__bottom.active {
+    display: flex;
+    z-index: 100;
 }

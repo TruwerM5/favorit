@@ -1,15 +1,28 @@
-let navbar_nav = document.querySelector('.navbar__nav');
+let navbar_nav = document.querySelectorAll('[data-navbar]');
 let navbar__items = document.querySelectorAll('.navbar__item:not(.navbar__item_nested)');
 const navbar__toggler = document.querySelector('.navbar__toggler');
 
 navbar__toggler.addEventListener('click', (e) => {
     e.preventDefault();
-    navbar_nav.classList.toggle('active');
+    navbar_nav.forEach(nav => {
+        nav.classList.toggle('active');
+
+        if (nav.classList.contains('active')) {
+            document.body.style.overflowY = 'hidden';
+            return;
+        }
+        document.body.style.overflowY = 'scroll';
+    })
+    // navbar_nav.classList.toggle('active');
+
 });
 
 navbar__items.forEach(item => {
     item.addEventListener('click', e => {
-       navbar_nav.classList.remove('active'); 
+        navbar_nav.forEach(nav => {
+            nav.classList.remove('active');
+        })
+    //    navbar_nav.classList.remove('active'); 
     });
 });
 
