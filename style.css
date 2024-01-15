@@ -95,7 +95,7 @@ button {
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 25px 23px;
+    padding: 25px 15px;
     background-color: #0D0D11;
     color: #FFF;
     z-index: 100;
@@ -194,7 +194,8 @@ button {
 }
 
 .header__bottom-item {
-    font-size: 2rem;
+    position: relative;
+    font-size: 1.7rem;
     font-weight: 700;
     color: #fff;
     font-family: Helvetica, sans-serif;
@@ -237,6 +238,7 @@ button {
 
 .navbar__logo-wrapper {
     margin-right: auto;
+    width: 130px;
 }
 
 
@@ -254,12 +256,12 @@ button {
 .navbar__nav {
     display: none;
     position: fixed;
-    top: 93px;
+    top: 87px;
     bottom: 0;
     left: 0;
     right: 0;
     width: 100%;
-    height: calc(100% - 93px - 87px);
+    height: calc(100% - 87px - 87px);
     z-index: 100;
     background-color: #0D0D11;
     padding: 20px 32px 37px 32px;
@@ -307,6 +309,11 @@ button {
     min-width: 200px;
     text-align: center;
 }
+
+.navbar__toggler {
+    width: 30px;
+}
+
 @media screen and (min-width: 1200px) {
     .navbar__toggler {
         display: none;
@@ -323,6 +330,13 @@ button {
     flex: 1;
     width: 4em;
     max-width: 40px;
+}
+
+@media screen and (min-width: 1200px) {
+    .navbar__icon {
+        width: 40px;
+        flex: none;
+    }
 }
 
 .dt-nav {
@@ -2524,12 +2538,14 @@ a.footer__text_underlined {
 
 .submenu__item {
     padding-top: 10px;
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 400;
 }
 
 .submenu__link,.navbar__link {
     color: #fff;
     text-align: left;
-
 }
 
 .navbar__link {
@@ -2559,7 +2575,6 @@ a.footer__text_underlined {
     bottom: 0;
     left: 0;
     width: 100%;
-    /* max-width: min-content; */
     display: none;
     justify-content: space-between;
     gap: 10px;
@@ -2572,4 +2587,44 @@ a.footer__text_underlined {
 .navbar__bottom.active {
     display: flex;
     z-index: 100;
+}
+
+.header__phone-number {
+    font-size: 1.6rem;
+    margin: 0 auto;
+}
+@media screen and (min-width: 1200px) {
+    .header__phone-number {
+        display: none;
+    }
+}
+
+.header__bottom-item .submenu {
+    position: absolute;
+    left: 0;
+    top: -999px;
+    height: auto;
+    max-width: 520px;
+    padding: 10px 0;
+    z-index: 10;
+    background-color: #0D0D11;
+    opacity: 0;
+    transition: opacity .9s;
+}
+
+.header__bottom-item:hover .submenu {
+    top: 100%;
+    opacity: 1;
+}
+
+.header__bottom-item .submenu__item {
+    white-space: nowrap;
+    padding-inline: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header__bottom-item:last-child .submenu {
+    right: 0;
+    left: auto;
+    max-width: fit-content;
 }
