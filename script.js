@@ -1,5 +1,5 @@
 let navbar_nav = document.querySelector('.navbar__nav');
-let navbar__items = document.querySelectorAll('.navbar__item');
+let navbar__items = document.querySelectorAll('.navbar__item:not(.navbar__item_nested)');
 const navbar__toggler = document.querySelector('.navbar__toggler');
 
 navbar__toggler.addEventListener('click', (e) => {

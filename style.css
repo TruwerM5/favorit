@@ -96,7 +96,7 @@ button {
     top: 0;
     width: 100%;
     padding: 25px 23px;
-    background-color: rgba(16, 16, 18, 0.7);
+    background-color: #0D0D11;
     color: #FFF;
     z-index: 100;
     max-width: 1920px;
@@ -253,11 +253,14 @@ button {
 }
 .navbar__nav {
     display: none;
-    position: absolute;
-    right: 0;
-    top: 100%;
+    position: fixed;
+    top: 93px;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    background-color: #0D0D11;
     padding: 20px 32px 37px 32px;
-    background-color: #1B1A1A;
     border-bottom-left-radius: 30px;
     text-align: center;
 }
@@ -274,19 +277,16 @@ button {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    gap: 40px;
+    align-items: flex-start;
+    gap: 10px;
 }
 
 .navbar__item {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    font-size: 2rem;
+    font-size: 1.7rem;
+    font-family: Arial, Helvetica, sans-serif;
     line-height: 2.5rem;
 }
+
 
 .navbar__button {
     padding: 17px 28px;
@@ -332,8 +332,8 @@ button {
 .dt-nav__phone {
     font-size: 2.4rem;
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: 700;
-    color: #CBA55A;
+    font-weight: 400;
+    color: #FFF;
     margin-bottom: 5px;
 }
 
@@ -2480,4 +2480,36 @@ a.footer__text_underlined {
 
 .docs__img {
     height: 241px;
+}
+
+.submenu {
+    max-height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease-out;
+    padding-left: 20px;
+}
+
+.navbar__link_nested.is-open + .submenu {
+    max-height: 100%;
+}
+
+.submenu__item {
+    padding-top: 10px;
+}
+
+.submenu__link,.navbar__link {
+    text-align: left;
+}
+
+.submenu__link {
+    transition: color .2s;
+    width: fit-content;
+}
+
+.submenu__link:hover {
+    color: #d7ae5e;
+}
+
+.submenu__link_underlined {
+   border-bottom: 1px dashed #fff;
 }
